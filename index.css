@@ -20,9 +20,18 @@
 	max-width: 400px;
 }
 
-.input{
+.input-1{
+	margin: 0 0 0 1px;
+	display: inline-block;
 	width:82.5%;
 	height: 30px;
 	border: 1px solid #909090;
 	border-radius: 5px;
+}
+.input{
+	width: 93%;
+	height: 80%;
+	margin: 0 0 0 10px;
+	border: 1px solid transparent;
+	outline-color: transparent;
 }
