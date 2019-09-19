@@ -54,7 +54,39 @@ clear.addEventListener("click", function() {
 })
 
 back.addEventListener("click", function() {
+	backSpace();
+});
+
+function backSpace() {
 	str = str.toString();
 	str = str.slice(0,str.length-1);
 	input.value = str;
-})
+}
+
+document.addEventListener('keydown', function(event){
+  const keyName = event.key;
+
+  // console.log(keyName);
+
+  if(!isNaN(keyName)||keyName=="*"||keyName=="/"||keyName=="+"||keyName=="-"||keyName=="."){
+	  	str += keyName;
+	  	input.value = str;
+	  	var i = effect(keyName);
+	  	setTimeout(function() {
+  			buttons[i].classList.remove("effect");
+		}, 200);
+	} if(keyName=="Enter"||keyName=="="){
+		findAnswer(str);
+	} if (keyName=="Backspace") {
+		backSpace();
+	}
+});
+
+function effect(keyName) {
+	for(var i=0;i<buttons.length;i++) {
+		if(buttons[i].textContent==keyName){
+			buttons[i].classList.add("effect");
+			return i;
+		}
+	}
+}
