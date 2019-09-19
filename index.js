@@ -23,6 +23,7 @@ for (var i = 0; i < buttons.length; i++) {
 equals.addEventListener("click", findAnswer);
 
 function findAnswer() {
+	str = input.value;
 	ans = findNextOperator(str);
 	if(str!="" && ans!=null){
 		input.value = ans;
