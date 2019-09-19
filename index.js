@@ -4,9 +4,17 @@ var equals = document.querySelector("#equals");
 var clear = document.querySelector("#clear");
 var back = document.querySelector("#back");
 var str = "";
+var j=0;
 
 for (var i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", function() {
+		if(this.textContent=="/"||this.textContent=="+"||this.textContent=="-"||this.textContent=="*") {
+			j++;
+		}
+		if (j==2) {
+			findAnswer(str);
+			j=1;
+		}
 		str += this.textContent;
 		input.value = str;
 	});
@@ -25,8 +33,8 @@ function findAnswer() {
 function findNextOperator(str) {
 
 	for(var i=0; i<str.length;i++){
-		var a = parseInt(str.slice(0,i));
-		var b =parseInt(str.slice(i+1,str.length));
+		var a = parseFloat(str.slice(0,i));
+		var b =parseFloat(str.slice(i+1,str.length));
 		if(str[i]=="/")
 			return a/b;
 		if(str[i]=="*")
