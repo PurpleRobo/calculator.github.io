@@ -16,8 +16,10 @@ equals.addEventListener("click", findAnswer);
 
 function findAnswer() {
 	ans = findNextOperator(str);
-	input.value = ans;
-	str = ans;	
+	if(str!="" && ans!=null){
+		input.value = ans;
+		str = ans;	
+	}
 }
 
 function findNextOperator(str) {
@@ -34,6 +36,7 @@ function findNextOperator(str) {
 		if(str[i]=="-")
 			return a-b;	
 	}
+	return null;
 }
 
 clear.addEventListener("click", function() {
