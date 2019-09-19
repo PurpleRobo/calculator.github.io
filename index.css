@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'N_T';
+    src: url('SF-Mono.dmg') format('truetype');
+}
+
 .btn{
 	display: inline-block;
 	width: 20%;
@@ -8,6 +13,7 @@
 	background: #add8e6;
 	text-align: center;
 	outline-color: transparent;
+	font-family: N_T;
 }
 
 .btn:hover {
