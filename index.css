@@ -3,6 +3,27 @@
     src: url('SF-Mono.dmg') format('truetype');
 }
 
+body{
+	margin: 0;
+}
+
+h1{
+	padding: 20px 0;
+	text-align: center;
+	color: white;
+	line-height: 1.1;
+	background-color: steelblue;
+	margin: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#stripe{
+	background-color: silver;
+	height: 10px;
+	text-align: center;
+}
+
 .btn{
 	display: inline-block;
 	width: 19.2%;
