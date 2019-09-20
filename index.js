@@ -76,17 +76,26 @@ document.addEventListener('keydown', function(event){
   			buttons[i].classList.remove("effect");
 		}, 200);
 	} if(keyName=="Enter"||keyName=="="){
+		equals.classList.add("effect");
+		setTimeout(function() {
+  			equals.classList.remove("effect");
+		}, 200);
 		findAnswer(str);
 	} if (keyName=="Backspace") {
 		backSpace();
+		back.classList.add("effect");
+		setTimeout(function() {
+  			back.classList.remove("effect");
+		}, 200);
 	}
 });
 
 function effect(keyName) {
+	console.log(keyName);
 	for(var i=0;i<buttons.length;i++) {
 		if(buttons[i].textContent==keyName){
 			buttons[i].classList.add("effect");
 			return i;
-		}
+		} 
 	}
 }
