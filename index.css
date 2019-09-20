@@ -26,7 +26,7 @@ h1{
 
 .btn{
 	display: inline-block;
-	width: 19.2%;
+	width: 76px;
 	border: 1px solid transparent;
 	padding: 10px 0;
 	margin: 5px 0;
@@ -44,11 +44,11 @@ h1{
 }
 
 #equals {
-	width: 39%;
+	width: 156px;
 }
 
 #dot {
-	width: 39%;
+	width: 156px;
 }
 
 .effect{
