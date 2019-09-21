@@ -63,8 +63,8 @@ function backSpace() {
 	input.value = str;
 }
 
-document.addEventListener('keydown', function(event){
-  const keyName = event.key;
+document.addEventListener('keyup', function(event){
+  var keyName = event.key;
 
   // console.log(keyName);
 
