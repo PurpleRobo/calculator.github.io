@@ -5,7 +5,7 @@
 
 body{
 	margin: 0;
-	font-family: 'N_T';
+	font-family: N_T;
 }
 
 h1{
@@ -28,14 +28,14 @@ h1{
 .btn{
 	font-weight: 200;
 	display: inline-block;
-	width: 72px;
+	width: 76px;
 	border: 1px solid transparent;
 	padding: 10px 0;
 	margin: 5px 0;
 	border-radius: 5px;
 	background: #00b5cc;
 	text-align: center;
-	font-family: 'N_T';
+	font-family: N_T;
 	outline-color: transparent;
 	transition: all 0.2s;
 }
@@ -46,11 +46,11 @@ h1{
 }
 
 #back {
-	width: 151px;
+	width: 156px;
 }
 
 #clear {
-	width: 151px;
+	width: 156px;
 }
 
 .effect{
@@ -70,7 +70,7 @@ h1{
 .input-1{
 	margin: 0 0 0 1px;
 	display: inline-block;
-	width: 95.6%;
+	width: 98%;
 	height: 30px;
 	border: 1px solid #909090;
 	border-radius: 5px;
