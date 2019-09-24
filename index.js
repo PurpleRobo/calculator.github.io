@@ -7,6 +7,7 @@ var str = "";
 var j=0;
 var k=0;
 
+input.disabled = true;
 input.value = 0;
 
 
