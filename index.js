@@ -5,6 +5,10 @@ var clear = document.querySelector("#clear");
 var back = document.querySelector("#back");
 var str = "";
 var j=0;
+var k=0;
+
+input.value = 0;
+
 
 for (var i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", function() {
@@ -63,19 +67,34 @@ function backSpace() {
 	input.value = str;
 }
 
-document.addEventListener('keyup', function(event){
+document.addEventListener('keydown', function(event){
   var keyName = event.key;
 
   // console.log(keyName);
 
-  if(!isNaN(keyName)||keyName=="*"||keyName=="/"||keyName=="+"||keyName=="-"||keyName=="."){
+  if(keyName=="*"||keyName=="/"||keyName=="+"||keyName=="-"||keyName=="."){
+  		k++;
+  		if(k==2) {
+  			findAnswer(str);
+  			k=1;
+  		}
 	  	str += keyName;
 	  	input.value = str;
 	  	var i = effect(keyName);
 	  	setTimeout(function() {
   			buttons[i].classList.remove("effect");
 		}, 200);
-	} if(keyName=="Enter"||keyName=="="){
+	} 
+	if(!isNaN(keyName)) {
+		str += keyName;
+	  	input.value = str;
+	  	var i = effect(keyName);
+	  	setTimeout(function() {
+  			buttons[i].classList.remove("effect");
+		}, 200);
+	}
+	if(keyName=="Enter"||keyName=="="){
+		k=1;
 		equals.classList.add("effect");
 		setTimeout(function() {
   			equals.classList.remove("effect");
@@ -91,7 +110,6 @@ document.addEventListener('keyup', function(event){
 });
 
 function effect(keyName) {
-	console.log(keyName);
 	for(var i=0;i<buttons.length;i++) {
 		if(buttons[i].textContent==keyName){
 			buttons[i].classList.add("effect");
