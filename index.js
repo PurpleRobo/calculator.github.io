@@ -6,9 +6,9 @@ var back = document.querySelector("#back");
 var str = "";
 var j=0;
 var k=0;
+var r=0;
 
 input.value = 0;
-
 
 for (var i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", function() {
@@ -52,9 +52,13 @@ function findNextOperator(str) {
 	return null;
 }
 
-clear.addEventListener("click", function() {
+function clearInput() {
 	str = "";
 	input.value = str;
+}
+
+clear.addEventListener("click", function() {
+	clearInput();
 })
 
 back.addEventListener("click", function() {
@@ -106,6 +110,13 @@ document.addEventListener('keydown', function(event){
 		setTimeout(function() {
   			back.classList.remove("effect");
 		}, 200);
+	} 
+	if (keyName == "Control") {
+		document.addEventListener("keydown", function(event){
+			if(event.key == "c"){
+				clearInput();
+			}
+		});
 	}
 });
 
