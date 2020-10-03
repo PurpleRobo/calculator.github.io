@@ -6,10 +6,6 @@
 body{
 	margin: 0;
 	font-family: N_T;
-	background: #30E8AA;
-	background: -webkit-linear-gradient(right, #30E8AA, #AACFE3);
-	background: -moz-linear-gradient(right, #30E8AA, #AACFE3);
-	background: linear-gradient(to left, #30E8AA, #AACFE3);
 }
 
 h1{
